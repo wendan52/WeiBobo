@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  WeiBobo
+//
+//  Created by mac on 15/10/9.
+//  Copyright (c) 2015年 wendan. All rights reserved.
+//
+
+#ifndef WeiBobo_PrefixHeader_pch
+#define WeiBobo_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+
+#import "UIViewExt.h"
+
+#define kVersion   [[UIDevice currentDevice].systemVersion doubleValue]
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kAppKey             @"2365422923"
+#define kAppSecret          @"4bb93a85d4a11d0e76e2c0db64107515"
+#define kAppRedirectURI     @"https://api.weibo.com/oauth2/default.html"
+
+#define unread_count  @"remind/unread_count.json"  //未读消息
+#define home_timeline @"statuses/home_timeline.json"  //微博列表
+#define comments      @"comments/show.json"   //评论列表
+#define user_timeline @"statuses/user_timeline.json"//用户微博内容
+
+#define send_update @"statuses/update.json"  //发微博(不带图片)
+#define send_upload @"statuses/upload.json"  //发微博(带图片)
+
+#define friendships_followers @"friendships/followers.json"//获取用户粉丝列表
+#define friendships_friends @"friendships/friends.json"//获取用户的关注列表
+
+#define placeNearby @"place/nearby/pois.json"//附近商圈
+#define nearby_users @"place/nearby/users"//附近发微博的人
+#define nearby_timeline @"place/nearby_timeline.json"//附近动态
+#define geo_to_address @"location/geo/geo_to_address.json"  //查询坐标对应的位置
+//微博字体
+#define FontSize_Weibo(isDetail) isDetail?16:15  //微博字体
+#define FontSize_ReWeibo(isDetail) isDetail?15:14 //转发微博字体
+
+#endif

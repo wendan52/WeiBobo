@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="FriendsListCell">
+            <rect key="frame" x="0.0" y="2" width="98" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="98" height="104"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNi-fA-Vsd">
+                        <rect key="frame" x="0.0" y="71" width="98" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="粉丝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NP-QN-6Gd">
+                        <rect key="frame" x="0.0" y="87" width="98" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXL-e5-rsi">
+                        <rect key="frame" x="15" y="2" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="68" id="hnS-l9-R7j"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="9NP-QN-6Gd" firstAttribute="centerX" secondItem="KXL-e5-rsi" secondAttribute="centerX" id="7w6-Gl-5qc"/>
+                <constraint firstItem="9NP-QN-6Gd" firstAttribute="top" secondItem="dNi-fA-Vsd" secondAttribute="bottom" constant="1" id="CNI-BS-L1Y"/>
+                <constraint firstItem="KXL-e5-rsi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="CzW-wJ-aE6"/>
+                <constraint firstItem="9NP-QN-6Gd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O5h-jn-eLo"/>
+                <constraint firstItem="dNi-fA-Vsd" firstAttribute="top" secondItem="KXL-e5-rsi" secondAttribute="bottom" constant="1" id="PQf-2g-PdP"/>
+                <constraint firstItem="9NP-QN-6Gd" firstAttribute="centerX" secondItem="dNi-fA-Vsd" secondAttribute="centerX" id="PdV-kx-ezH"/>
+                <constraint firstAttribute="trailing" secondItem="9NP-QN-6Gd" secondAttribute="trailing" id="Qsr-qV-VS3"/>
+                <constraint firstAttribute="bottom" secondItem="9NP-QN-6Gd" secondAttribute="bottom" constant="1" id="UCJ-3N-MS1"/>
+                <constraint firstAttribute="trailing" secondItem="dNi-fA-Vsd" secondAttribute="trailing" id="Zug-ha-p3h"/>
+                <constraint firstAttribute="centerX" secondItem="KXL-e5-rsi" secondAttribute="centerX" id="gxb-bk-EjP"/>
+                <constraint firstItem="KXL-e5-rsi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="hrF-cr-Buh"/>
+                <constraint firstItem="dNi-fA-Vsd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jxD-VW-z4J"/>
+                <constraint firstItem="9NP-QN-6Gd" firstAttribute="top" secondItem="dNi-fA-Vsd" secondAttribute="bottom" constant="1" id="unS-3q-Bwc"/>
+            </constraints>
+            <size key="customSize" width="117" height="127"/>
+            <connections>
+                <outlet property="followersLable" destination="9NP-QN-6Gd" id="al8-8H-wI7"/>
+                <outlet property="headImageView" destination="KXL-e5-rsi" id="hwd-ac-Z9t"/>
+                <outlet property="nameLabel" destination="dNi-fA-Vsd" id="P9a-qX-PCo"/>
+            </connections>
+            <point key="canvasLocation" x="327" y="179"/>
+        </collectionViewCell>
+    </objects>
+</document>
