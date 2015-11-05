@@ -122,13 +122,34 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         [_sinaWeibo logOut];
+        [self removeAuthData];
         [_tableView reloadData];
     }
 }
 
+//存储新浪微博登陆数据
+- (void)storeAuthData
+{
+    NSDictionary *authData = [NSDictionary dictionaryWithObjectsAndKeys:
+                              _sinaWeibo.accessToken, @"AccessTokenKey",
+                              _sinaWeibo.expirationDate, @"ExpirationDateKey",
+                              _sinaWeibo.userID, @"UserIDKey",
+                              _sinaWeibo.refreshToken, @"refresh_token", nil];
+    [[NSUserDefaults standardUserDefaults] setObject:authData forKey:@"MySinaWeiboAuthData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+//移除新浪微博登陆数据
+- (void)removeAuthData
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"MySinaWeiboAuthData"];
+}
+
+
 #pragma mark - SinaWeibo delegate
 -(void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo {
     [[[UIAlertView alloc] initWithTitle:@"登陆成功" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+    [self storeAuthData];
     [_tableView reloadData];
 }
 @end

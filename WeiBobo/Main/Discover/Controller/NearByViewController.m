@@ -35,8 +35,8 @@
 //    
 //    WeiboAnnotation *annotation = [[WeiboAnnotation alloc] init];
 //    annotation.coordinate = coordinate;
-//    annotation.title = @"汇文教育";
-//    annotation.subtitle = @"27班";
+//    annotation.title = @"之江";
+//    annotation.subtitle = @"嘻嘻";
 //    
 //    [_mapView addAnnotation:annotation];
 }

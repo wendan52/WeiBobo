@@ -8,7 +8,7 @@
 
 /*
     注意事项：
-            1.使用之前需要倒入 libicucore.dylib  And  CoreText.framework
+            1.使用之前需要导入 libicucore.dylib  And  CoreText.framework
             2.此类使用了ARC管理内存
             3.如果你的项目是非ARC项目，你需要在文件添加-fobjc-arc的标示（非ARC标示-fno-objc-arc）
  */
